@@ -1,0 +1,29 @@
+<div class="container mt-5">
+
+  <h1 class="text-center mb-4">Create a New Movie</h1>
+
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+
+      <div class="card shadow-sm">
+
+        <div class="card-header text-center" style="background-image: url('https://cdn.pixabay.com/photo/2017/08/01/01/04/popcorn-2567807_960_720.jpg'); background-size: cover; background-position: center; height: 200px; border-radius: 5px 5px 0 0;">
+        </div>
+
+        <div class="card-body">
+          <%= form_with model: @list, local: true do |form| %>
+            <div class="form-group mb-3">
+              <%= form.label :name, "Category Name", class: "form-label" %>
+              <%= form.text_field :name, class: "form-control", placeholder: "Enter category name" %>
+            </div>
+
+            <div class="text-center mt-4">
+              <%= form.submit "Create Category", class: "btn btn-primary me-2" %>
+              <%= link_to "Cancel", lists_path, class: "btn btn-secondary" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
